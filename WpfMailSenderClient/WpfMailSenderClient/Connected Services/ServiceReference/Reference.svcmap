@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dfb9ba3f-3ca5-40d8-8324-1fede89607d5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://localhost:44362/MailSender.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MailSender.xsd" MetadataType="Schema" ID="a1a13f99-d380-4fd7-9433-bbfb16b2d0fe" SourceId="1" SourceUrl="https://localhost:44362/MailSender.svc?xsd=xsd2" />
+    <MetadataFile FileName="MailSender1.xsd" MetadataType="Schema" ID="2789a3aa-b79d-46b2-b3c6-0df0b6b1bb24" SourceId="1" SourceUrl="https://localhost:44362/MailSender.svc?xsd=xsd1" />
+    <MetadataFile FileName="MailSender.wsdl" MetadataType="Wsdl" ID="7775c8e2-55bc-41da-94cb-431e84e9f582" SourceId="1" SourceUrl="https://localhost:44362/MailSender.svc?wsdl" />
+    <MetadataFile FileName="MailSender.disco" MetadataType="Disco" ID="91333aac-7c69-4830-81ac-92238c45ad52" SourceId="1" SourceUrl="https://localhost:44362/MailSender.svc?disco" />
+    <MetadataFile FileName="MailSender2.xsd" MetadataType="Schema" ID="0397738e-e1e4-4683-b18c-33dd50117bf8" SourceId="1" SourceUrl="https://localhost:44362/MailSender.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
