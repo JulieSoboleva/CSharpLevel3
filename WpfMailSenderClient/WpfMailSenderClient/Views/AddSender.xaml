@@ -1,0 +1,17 @@
+﻿<Window x:Class="WpfMailSenderClient.Views.AddSender"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMailSenderClient.Views"
+        mc:Ignorable="d"
+        Title="Добавить отправителя" Height="210" Width="250" Icon="/Images/myIcon.ico">
+    <StackPanel Width="240" VerticalAlignment="Top" HorizontalAlignment="Center">
+        <TextBlock Text="Введите email:" Margin="5,10,5,5"/>
+        <TextBox x:Name="tbLogin" Margin="5" Height="18"/>
+        <TextBlock Text="Введите пароль:" Margin="5"/>
+        <PasswordBox x:Name="pwPassword" Margin="5" Height="18"/>
+        <Button Name="btnOK" Click="BtnOK_Click" Margin="5">Сохранить</Button>
+        <Button Name="btnCancel" Click="BtnCancel_Click" Margin="5">Отменить</Button>
+    </StackPanel>
+</Window>

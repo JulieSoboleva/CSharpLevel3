@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="WpfMailSenderClient.Views.EmailInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:WpfMailSenderClient.Views"
+             mc:Ignorable="d"
+             Height="Auto" Width="Auto"
+             d:DesignHeight="450" d:DesignWidth="800" 
+             DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding ReadAllMailsCommand}"/>
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Получатели сообщений" HorizontalAlignment="Center" FontWeight="DemiBold" Margin="0,5,0,0"/>
+        <DockPanel Grid.Row="1" Margin="5">
+            <WrapPanel>
+                <TextBlock Text="Поиск по имени:"/>
+                <TextBox Margin="15,0,0,0" MinWidth="200" Text="{Binding FilterName, UpdateSourceTrigger=PropertyChanged, Delay=100}"/>
+            </WrapPanel>
+        </DockPanel>
+        <DataGrid Grid.Row="2" SelectedItem="{Binding CurrentEmail}"
+                  ItemsSource="{Binding EmailsView}"
+                  AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="Auto"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="Auto"/>
+                <DataGridTextColumn Header="ФИО адресата" Binding="{Binding Name}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="3" Command="{Binding ReadAllMailsCommand}" Content="Отобразить данные" FontWeight="DemiBold" Margin="0,5,0,0"/>
+    </Grid>
+</UserControl>

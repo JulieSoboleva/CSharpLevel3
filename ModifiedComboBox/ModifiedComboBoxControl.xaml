@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="ModifiedComboBox.ModifiedComboBoxControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ModifiedComboBox"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" Width="484.2">
+    <Grid Width="Auto" Height="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <ToolBar x:Name="tbSender" Width="485" Height="Auto" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <Label x:Name="label" Content="Наименование" Width="Auto" Height="25"/>
+            <ComboBox x:Name="comboBox" Width="200" Height="25" HorizontalAlignment="Stretch" ToolTip="Пояснительная подпись"/>
+            <Button x:Name="btnAdd" Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Right" ToolTip="Добавить запись" Click="btnAdd_Click">
+                <Image Source="Images/add.png" Width="18" Height="18" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Button>
+            <Button x:Name="btnEdit" Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Left" ToolTip="Редактировать запись" Click="btnEdit_Click">
+                <Image Source="Images/edit.png" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+            <Button x:Name="btnDelete" Height="Auto" Width="Auto" VerticalAlignment="Stretch" HorizontalAlignment="Left" ToolTip="Удалить запись" Click="btnDelete_Click">
+                <Image Source="Images/delete.png" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Button>
+        </ToolBar>
+    </Grid>
+</UserControl>

@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="WpfMailSenderClient.Views.SaveEmailView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:WpfMailSenderClient.Views"
+             xmlns:rules="clr-namespace:WpfMailSenderClient.ValidationRules"
+             mc:Ignorable="d"
+             DataContext="{Binding Main, Source={StaticResource Locator}}"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid DataContext="{Binding CurrentEmail}">
+        <Grid.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="Validation.ErrorTemplate">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <DockPanel LastChildFill="True" ToolTip="{Binding ElementName=ValidationElement, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}">
+                                <TextBlock DockPanel.Dock="Right" Text="*" FontWeight="Bold" Foreground="Red" FontSize="20"/>
+                                <Border BorderBrush="OrangeRed" BorderThickness="2">
+                                    <AdornedElementPlaceholder Name="ValidationElement"/>
+                                </Border>
+                            </DockPanel>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger Property="Validation.HasError" Value="True">
+                        <Setter Property="Opacity" Value="0.3"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Text="Редактирование записи" FontWeight="DemiBold" HorizontalAlignment="Center" Margin="0,5,0,5"/>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="ID:" HorizontalAlignment="Right" Margin="0,5,5,0"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Email:" HorizontalAlignment="Right" Margin="5,5,5,0"/>
+        <TextBlock Grid.Column="0" Grid.Row="3" Text="ФИО:" HorizontalAlignment="Right" Margin="0,5,5,0"/>
+        <TextBox Grid.Column="1" Grid.Row="1">
+            <TextBox.Text>
+                <Binding Path="ID" NotifyOnValidationError="True" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged" >
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                        <rules:DatabaseID/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox Grid.Column="1" Grid.Row="2">
+            <TextBox.Text>
+                <Binding Path="Email" NotifyOnValidationError="True" ValidatesOnDataErrors="True" UpdateSourceTrigger="PropertyChanged" >
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule/>
+                        <rules:EmailAddress/>
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Name}"/>
+        <Button Name="SaveButton" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Сохранить  изменения" Height="23.2"
+                Command="{Binding DataContext.SaveEmailCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                CommandParameter="{Binding}" HorizontalAlignment="Center" Padding="30,0" FontWeight="DemiBold"/>
+    </Grid>
+</UserControl>
