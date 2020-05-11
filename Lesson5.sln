@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson5", "Lesson5\Lesson5.csproj", "{63345CEC-E868-4AE3-8F18-A11302069A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{C9790FE6-7446-4EB3-84D1-C9DCD41C93F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThreadInSendMails", "ThreadInSendMails", "{D0BFD99F-A353-4437-AF56-C45D49673BF0}"
+	ProjectSection(SolutionItems) = preProject
+		MailBox.xaml.cs = MailBox.xaml.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63345CEC-E868-4AE3-8F18-A11302069A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63345CEC-E868-4AE3-8F18-A11302069A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63345CEC-E868-4AE3-8F18-A11302069A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63345CEC-E868-4AE3-8F18-A11302069A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9790FE6-7446-4EB3-84D1-C9DCD41C93F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9790FE6-7446-4EB3-84D1-C9DCD41C93F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9790FE6-7446-4EB3-84D1-C9DCD41C93F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9790FE6-7446-4EB3-84D1-C9DCD41C93F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {453ED479-1E84-4814-A6E7-8363CC1A7DF8}
+	EndGlobalSection
+EndGlobal
