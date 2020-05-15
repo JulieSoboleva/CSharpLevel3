@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matrix", "Matrix\Matrix.csproj", "{3523DF54-CCB2-4852-9835-8C37B2C08D7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWorkWithFiles", "..\WpfWorkWithFiles\WpfWorkWithFiles.csproj", "{9D554611-0260-4BE9-A84F-F49A1541E82D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3523DF54-CCB2-4852-9835-8C37B2C08D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3523DF54-CCB2-4852-9835-8C37B2C08D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3523DF54-CCB2-4852-9835-8C37B2C08D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3523DF54-CCB2-4852-9835-8C37B2C08D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D554611-0260-4BE9-A84F-F49A1541E82D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D554611-0260-4BE9-A84F-F49A1541E82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D554611-0260-4BE9-A84F-F49A1541E82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D554611-0260-4BE9-A84F-F49A1541E82D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {855D3F5B-3274-4898-BDBD-7C61DB3CA6A3}
+	EndGlobalSection
+EndGlobal
